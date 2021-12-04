@@ -11,39 +11,27 @@ possibly being a “-” to indicate a wildcard. For example, “bb” indicates
 has a dominant black gene and that we don’t care about whether the other one is dominant or recessive.  <br> <br>
 When a cat has no dominant red (O) gene, its coat will be a variation of black, according to the following four combinations:
 
-B-D-: Black
+B-D-: Black   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    B-dd: Blue
 
-B-dd: Blue
-
-bbD-: Chocolate
-
-bbdd: Lilac
+bbD-: Chocolate   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    bbdd: Lilac
 
 Now, red (O or o) is sex bound on the X chromosone. This means a male cat, or tom, only has a single red gene, while a female has two.
 Red dominates black, meaning that a cat having an O gene will always have red coloring. Like black, red is also affected by the dilution gene.
 For male cats, we have the following two possible red colors (here, the black genes have no effect on the coat color):
 
-D-O: Red
-
-ddO: Cream
+D-O: Red   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ddO: Cream
 
 For female cats the situation gets a bit more complicated. If the female has two O genes she will be be red, with variations depending 
 on the dilution gene in exactly the same way as for male red cats:
 
-D-OO: Red
-
-ddOO: Cream
+D-OO: Red   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ddOO: Cream
 
 However, a female cat with the Oo combination will have a partially black, partially red, coat. These cats are known as Torties (Tortoiseshells), 
 and named after both their coat colours, starting with the black. The four possible Tortie colorings are thus as follows:
 
-B-D-Oo: Black-Red Tortie
+B-D-Oo: Black-Red Tortie   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    B-ddOo: Blue-Cream Tortie
 
-B-ddOo: Blue-Cream Tortie
-
-bbD-Oo: Chocolate-Red Tortie
-
-bbddOo: Lilac-Cream Tortie
+bbD-Oo: Chocolate-Red Tortie   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    bbddOo: Lilac-Cream Tortie
 
 When a pair of cats have kittens, the offspring will get a random set of genes from their parents according to the following simple process: for each gene,
 independently, one of the copies is selected uniformly at random from the father’s two copies, and the other copy is selected uniformly at random from the mother’s
@@ -52,7 +40,22 @@ genes at random), and a 50% chance that the offspring will be male in which case
 Write a program which, given the colors of two cats, computes the most likely color for their offspring. For cats having a color where some genes do not affect the color,
 assume that the corresponding genes are uniformly random (over the two choices dominant/recessive). For example, if a cat is red, you should assume that the possibilities
 “DD” and “Dd” for the dilution gene are equally likely, and that the four possibilities “BB”, “Bb”, “bB” and “bb” are equally likely for the black gene 
-(but note that “Bb” and “bB” are equivalent).
+(but note that “Bb” and “bB” are equivalent). <br>
 [Source](https://open.kattis.com/problems/catcoat)
+### Input
+The input consists of two lines. The first line gives the color of the female cat, and the second line gives the color of the male cat.
+Each color is spelled and capitalized exactly as when it is listed above, and the color is valid (i.e., the male cat won’t be a Tortie).
+### Output
+Output a list of the possible color outcomes for the offspring of the two cats. Each line should contain a color followed by a number 0<p≤1 indicating the probability of this particular outcome. <br>
+The list should be sorted first in decreasing order by probability, then in alphabetic order by name (see sample input 3 below). You do not need to worry about the precise formatting of the probabilities (e.g., number of decimals), but the absolute error of each probability must be smaller than 10^-9.
+### Examples
+#### Sample 1
+* Input <br>
+`Red` <br> `Red`  
+* Output  <br>
+`Red 0.937500000` <br> `Cream 0.062500000`
+ ![](Sample1.jpeg)
+#### Sample 2
+#### Sample 3
 ### Some Insight
 ### Implementation In C++
