@@ -56,6 +56,11 @@ The list should be sorted first in decreasing order by probability, then in alph
 `Red 0.937500000` <br> `Cream 0.062500000`
  ![](Sample1.jpeg)
 #### Sample 2
+* Input <br>
+`Lilac-Cream Tortie` <br> `Blue`  
+* Output  <br>
+`Blue 0.375000000` <br> `Cream 0.250000000` <br> `Blue-Cream Tortie 0.187500000` <br> `Lilac 0.125000000` <br> `Lilac-Cream Tortie 0.062500000`
+ ![](Sample2.jpeg)
 #### Sample 3
 ### Some Insight
 ### Implementation In C++
